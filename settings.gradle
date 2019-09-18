@@ -1,0 +1,9 @@
+pluginManagement {
+  repositories {
+    maven {
+      url 'http://10.34.167.150:8081/repository/gradle-plugins/'
+    }
+  }
+}
+
+rootProject.name = 'deck-of-cards'
