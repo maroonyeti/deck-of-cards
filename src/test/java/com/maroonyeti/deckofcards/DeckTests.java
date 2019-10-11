@@ -1,17 +1,18 @@
 package com.maroonyeti.deckofcards;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 
 public class DeckTests {
 
   @Test
-  public void createDeck_WithCards_NewInstanceOfDeckIsCreated() {
+  public void create2Decks_2Instances_NotEqualsEquals() {
 
     Deck deck1 = new Deck();
     Deck deck2 = new Deck();
 
-    assertNotEquals(deck1, deck2);
+    assertThat(deck1 == deck2).isFalse();
   }
 
   /*
