@@ -1,7 +1,9 @@
 plugins {
-	id 'org.springframework.boot' version '2.1.8.RELEASE'
+	id 'org.springframework.boot' version '2.1.9.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
+	id 'com.github.ben-manes.versions' version '0.26.0'
+	id 'io.freefair.lombok' version '4.1.2'
 }
 
 group = 'com.maroonyeti'
@@ -9,11 +11,13 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '8'
 
 repositories {
-	maven { url "http://10.34.167.150:8081/repository/maven-public/" }
+	maven { url 'http://10.34.167.150:8081/repository/maven-public/' }
 	mavenCentral()
 }
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.assertj:assertj-core:3.13.2'
 }
